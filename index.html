@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Travel Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #38b6c2;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+        }
+
+        #home {
+            background-image: url('https://media.cntraveler.com/photos/61eae2a9fe18edcbd885cb01/3:2/w_4047,h_2698,c_limit/Seychelles_GettyImages-1169388113.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            height: 100vh;
+        }
+
+        #about {
+            background-image: url('https://naples.travel/wp-content/uploads/2023/10/naples-fl-beach-sunset-view.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            height: 100vh;
+        }
+
+        #contact {
+            background-image: url('https://explora.mu/media/k2/items/cache/2722f6bcd13027c06fe9d3b0e6f955cf_XL.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            height: 100vh;
+        }
+
+        .section-header {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styles */
+        .form-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-container input,
+        .form-container textarea,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .form-container button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .form-container button:hover {
+            background-color: #ff6347;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #39aac6;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* About Section Styles */
+        #about .about-content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        #about img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        #about p {
+            max-width: 600px;
+            margin: 1rem auto;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section Styles */
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Explore Travel</div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1 class="section-header">Welcome to Explore Travel</h1>
+        <p class="section-description">Your perfect vacation awaits! Explore amazing destinations with us.</p>
+        <button class="book-btn">Book Your Trip</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1 class="section-header">About Us</h1>
+        <div class="about-content">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe5EPulH8uyp92yXyo9hvx_OKb8rwRMxOSAg&s" alt="Mountain Destination">
+                <p>We are passionate about travel and have years of experience helping clients find the perfect vacation. We offer customized itineraries to breathtaking destinations around the world.</p>
+            </div>
+            <div>
+                <img src="data:image/jpeg;base64,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" alt="City Destination">
+                <p>Our services include guided tours, transportation, accommodations, and exclusive deals, ensuring you have an unforgettable experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1 class="section-header">Contact Us</h1>
+        <div class="contact-section">
+            <div class="form-container">
+                <form id="contactForm">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <p id="formMessage"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Explore Travel Agency | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // JavaScript for Form Validation and Handling
+        const form = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                formMessage.style.color = 'green';
+                form.reset(); // Reset the form fields
+            } else {
+                formMessage.textContent = 'Please fill in all fields before submitting.';
+                formMessage.style.color = 'red';
+            }
+        });
+
+        // Smooth scrolling between sections
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop - 80, // Adjust for nav bar height
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
